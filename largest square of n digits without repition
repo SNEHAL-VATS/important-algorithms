@@ -1,0 +1,23 @@
+import math
+def rep(num):
+    m=list(str(num))
+    l=0
+    for i in m:
+        if m.count(i)!=1:
+            return False
+        else :
+            continue
+    if l==0:
+        return True
+
+n=int(input("Enter the number of digits: "))
+x=pow(math.ceil(math.sqrt(pow(10, n))) - 1, 2)
+sqr=int(math.sqrt(x))
+
+for i in range(sqr,3,-1):
+    sq=i**2
+    check=rep(sq)
+    if check == True:
+        print(sq)
+        break
+
